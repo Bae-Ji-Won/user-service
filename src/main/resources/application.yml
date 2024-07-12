@@ -1,0 +1,14 @@
+server:
+  port: 9001    # UserServiceApplication2의 속성에서 edit Configuration의 VM options에서 별도의 서버 포트 설정 가능
+
+spring:
+  application:
+    name: user-service
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true    # Eureka 메인 서버로 부터의 수정된 값 업데이트 진행
+    service-url:            # 메인 서버 주소
+      defaultZone: http://127.0.0.1:8761/eureka
